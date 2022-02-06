@@ -10,3 +10,11 @@ Here I am working on titanic survival dataset from kaggle and I used various typ
 Here I import the csv file of both train and test dataset. Initialized the survival column as 0. Which exported as "Lazy_Predictor.csv".
 Later I was trying to predict passenger survival based on Gender where female survived and male couldn't. So I initialized female as 1.
 Which exported as "Gender_Model.csv".
+
+
+
+####################################################################################################
+####################################################################################################
+####################################   1. Data Preparation      ####################################
+####################################################################################################
+####################################################################################################
