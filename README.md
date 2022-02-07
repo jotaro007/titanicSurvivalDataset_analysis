@@ -19,4 +19,6 @@ Which exported as "Gender_Model.csv".
 ####################################################################################################
 ####################################################################################################
 
-In order to prepare the data first we combine the test and train dataset and name it as "Full". 
+In order to prepare the data first we combine the test and train dataset and name it as "Full". Using 'Sapply' to get the percentage of missing value
+of the attributes, and 'Amelia' package to find the graphical representation of 'Missing Map'. Drop the variable which has the missing value more than
+20%. And also imputing 'Age' variable with mean value, 
