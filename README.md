@@ -41,13 +41,42 @@ Here I am also using Univariate, Bivariate and Multivariate analysis.
 ####################################################################################################
 
 In the feature engineering section I am focusing on creating three new variables. They are 'Child', 'Title' and 'Family Size'.
+If the age of a person is smaller than 18 years old then I initialized the row as 1, which considers as child and when the age is greater equal to 18 years old then 
+it considers as adult person. 
+For the title I extract the different types of title and then combine them into three title group. 
+to find out family size I am using sibsp column to find siblings or spouse, and parch column to get parents and children.
+Later I created two datasets from 'Full' dataset name as 'train_featured' and 'test_featured'.
+
+####################################################################################################
+####################################################################################################
+#####################################  5. Logistic Regression   ####################################
+####################################################################################################
+####################################################################################################
+
+To perform logistic regression, I need to use 'caTools' library to split dataset. I use 'train_featured' then split it into 'train.data' and 'test.data'. 
+To create logistic model I use 'glm' function where I first excluded feature engineering variables later included feature engineering variables. Then use 
+ANOVA test to find out the difference betweek two models (model with feature engineering and model without feature engineering). Later predict 'test.data' 
+on the logit model. 
+I also use 'caret' library to build confusion matrix and 'ROCR' library to see ROC-AUC curve.
+
+####################################################################################################
+####################################################################################################
+#####################################  6. Decision Tree   ##########################################
+####################################################################################################
+####################################################################################################
+
+For decision tree I use 'rattle', 'rpart.plot', 'RColorBrewer' and 'rpart' library. Recreate the gender model and use 'rpart.plot' library to visualise the 
+decision tree. Then I built a deeper tree without feautre engineering and with feature engineering. 
+Then I use minsplit = 2, cp = 0 and perform another decision tree algorithm by using 'rpart' library. Also using pruning technique to remove the parts of the tree that do not provide power to classify instances.
 
 
+####################################################################################################
+####################################################################################################
+######################################  6. Radom Forest   ##########################################
+####################################################################################################
+####################################################################################################
 
-
-
-
-
+Here I use 'randomForest' library to build model by using 'test_featured' later find prediction by using 'test_featured'. Also using 'party' library to build conditional inference trees. 
 
 
 
