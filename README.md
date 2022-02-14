@@ -1,21 +1,17 @@
 # titanicSurvivalDataset_analysis
 Here I am working on titanic survival dataset from kaggle and I used various types of data mining algorithm to optimize the desired solution
 
+# 1. First Prediction 
 ####################################################################################################
 ####################################################################################################
-####################################   1. First Prediction      ####################################
-####################################################################################################
-####################################################################################################
+
 
 Here I import the csv file of both train and test dataset. Initialized the survival column as 0. Which exported as "Lazy_Predictor.csv".
 Later I was trying to predict passenger survival based on Gender where female survived and male couldn't. So I initialized female as 1.
 Which exported as "Gender_Model.csv".
 
 
-
-####################################################################################################
-####################################################################################################
-####################################   2. Data Preparation      ####################################
+# 2. Data Preparation    
 ####################################################################################################
 ####################################################################################################
 
@@ -25,18 +21,14 @@ of the attributes, and 'Amelia' package to find the graphical representation of 
 into train_cleaned = Full[1:891,] and test_cleaned = Full[892:1039,]. 
 
 
-####################################################################################################
-####################################################################################################
-###############################  3. Data Exploration on cleaned data   #############################
+# 3. Data Exploration on cleaned data   
 ####################################################################################################
 ####################################################################################################
 
 Here I am using the library package "ggplot2". By using this library I am getting visual representattion of categorical and numerical variables.
 Here I am also using Univariate, Bivariate and Multivariate analysis.
 
-####################################################################################################
-####################################################################################################
-#####################################  4. Feature Engineering   ####################################
+# 4. Feature Engineering   
 ####################################################################################################
 ####################################################################################################
 
@@ -47,9 +39,7 @@ For the title I extract the different types of title and then combine them into 
 to find out family size I am using sibsp column to find siblings or spouse, and parch column to get parents and children.
 Later I created two datasets from 'Full' dataset name as 'train_featured' and 'test_featured'.
 
-####################################################################################################
-####################################################################################################
-#####################################  5. Logistic Regression   ####################################
+# 5. Logistic Regression  
 ####################################################################################################
 ####################################################################################################
 
@@ -59,9 +49,7 @@ ANOVA test to find out the difference betweek two models (model with feature eng
 on the logit model. 
 I also use 'caret' library to build confusion matrix and 'ROCR' library to see ROC-AUC curve.
 
-####################################################################################################
-####################################################################################################
-#####################################  6. Decision Tree   ##########################################
+# 6. Decision Tree  
 ####################################################################################################
 ####################################################################################################
 
@@ -70,9 +58,7 @@ decision tree. Then I built a deeper tree without feautre engineering and with f
 Then I use minsplit = 2, cp = 0 and perform another decision tree algorithm by using 'rpart' library. Also using pruning technique to remove the parts of the tree that do not provide power to classify instances.
 
 
-####################################################################################################
-####################################################################################################
-######################################  6. Radom Forest   ##########################################
+# 7. Radom Forest 
 ####################################################################################################
 ####################################################################################################
 
